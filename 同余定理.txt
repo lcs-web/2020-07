@@ -1,0 +1,24 @@
+1.定理描述
+给定一个正整数m(m > 1)，如果两个整数 a 和 b 满足 a-b能够被 m 整除，即 (a-b)/m 得到一个整数，那么就称 a 与 b 对模m同余，记作:a ≡ b(mod m)，读作 ：a 与 b 对模 m同余。
+显然有如下事实：
+1）若 a ≡ 0(mod m)，则 a | m;
+2) a ≡ b(mod m)等价于分别用 m 去除 a 和 b ,余数相同。
+2.基本性质
+① 反身性：a ≡ a(mod m)
+②对称性：若 a ≡ b(mod m)，则 b ≡ a(mod m)
+③传递性：a ≡ b(mod m)，b ≡ c(mod m)，则 a ≡ c(mod m)
+④同余式相加： a ≡ b(mod m)，c ≡ d(mod m)，则 a ± c ≡ b ± d(mod m)
+⑤同余式相乘：a ≡ b(mod m)，c ≡ d(mod m)，则 ac ≡ bd(mod m)
+⑥线性运算：a ≡ b(mod m)，c ≡ d(mod m)，则 a ± c ≡ b ± d(mod m)，a * c ≡ b * d(mod m)
+⑦除法：ac ≡ bc(mod m)，c ≠ 0，则 a ≡ b(mod m／gcd(c,m))，其中，gcd(c,m)表示 c 和 m 的最大公约数
+特殊地，gcd(c,m) = 1时，则 a ≡ b(mod m) 
+⑧幂运算：
+⑨ a ≡ b(mod m) ，n = m，则 a ≡ b(mod m)
+⑩若a ≡ b (mod mi) (i=1,2…n) 则 a ≡ b (mod [m1,m2,…mn]) 其中[m1,m2,…mn]表示m1,m2,…mn的最小公倍数
+3.定理应用
+⑴同余定理的加法乘法应用
+(a + b) % m = (a % m + b % m) % m
+(a * b) % m = ((a % m) * (b % m)) % m
+⑵高精度取模
+高精度对单精度取模：一个高精度数对一个数取余，可以把高精度数看成各位数的权值与个位数乘积的和。
+例如：1234 = （（1 * 10 +2）* 10 +3）* 10 + 4），对这个数进行取余运算就是上面基本加和乘的应用。数
